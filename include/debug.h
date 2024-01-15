@@ -10,31 +10,31 @@
     #define DEBUG_INFO(fmt, ...) \
         { \
             printf("(%s:%d INFO) ", __FILE__, __LINE__); \
-            printf(fmt __VA_ARGS__); \
+            printf(fmt, ##__VA_ARGS__); \
             printf("\n"); \
         }
     #define DEBUG_WARN(fmt, ...) \
         { \
             printf("(%s:%d WARN) ", __FILE__, __LINE__); \
-            printf(fmt __VA_ARGS__); \
+            printf(fmt, ##__VA_ARGS__); \
             printf("\n"); \
         }
     #define DEBUG_ERR(fmt, ...) \
         { \
             printf("(%s:%d ERR) ", __FILE__, __LINE__); \
-            printf(fmt __VA_ARGS__); \
+            printf(fmt, ##__VA_ARGS__); \
             printf("\n"); \
         }
     #define DEBUG_FATAL(fmt, ...) \
         { \
             printf("(%s:%d FATAL) ", __FILE__, __LINE__); \
-            printf(fmt __VA_ARGS__); \
+            printf(fmt, ##__VA_ARGS__); \
             printf(" | exiting.\n"); \
         }
     #define DEBUG_ABORT(fmt, ...) \
         { \
             printf("(%s:%d ABORT) ", __FILE__, __LINE__); \
-            printf(fmt __VA_ARGS__); \
+            printf(fmt, ##__VA_ARGS__); \
             printf(" | killing process.\n"); \
             kill(getpid(), SIGKILL); \
         }
