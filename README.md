@@ -2,6 +2,8 @@
 
 Small header-only implementation of debug statements that can be enabled/disabled with environment variables.
 
+Compile your code with `gcc -D DEBUG_ENABLE ...` and you will be able to enable these macros. Otherwise, if `-D DEBUG_ENABLE` isn't found or `#define DEBUG_ENABLE` isn't defined in the source, the macros will be empty statements.
+
 ## Example
 
 For errors with normal execution:
